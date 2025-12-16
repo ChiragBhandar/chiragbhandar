@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import About from '@/components/About';
+import Skills from '@/components/Skills';
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -123,6 +124,9 @@ export default function Home() {
       
       {/* About Section - includes About Me, Marquee Text, Profile Image, and Stats */}
       <About />
+      
+      {/* Skills Section - Horizontal Carousel */}
+      <Skills />
     </div>
   );
 }
