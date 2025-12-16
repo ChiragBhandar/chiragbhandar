@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import About from '@/components/About';
 import Skills from '@/components/Skills';
+import Projects from '@/components/Projects';
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -127,6 +128,9 @@ export default function Home() {
       
       {/* Skills Section - Horizontal Carousel */}
       <Skills />
+      
+      {/* Projects Section - Featured Work */}
+      <Projects />
     </div>
   );
 }
