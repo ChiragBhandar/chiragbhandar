@@ -96,6 +96,7 @@ export default function Skills() {
 
   return (
     <section 
+      id="skills"
       ref={sectionRef}
       className="min-h-screen w-full bg-white relative overflow-hidden py-20"
     >
@@ -245,14 +246,14 @@ function SkillsMarquee({ isVisible }) {
           {duplicatedSkills.map((skill, index) => (
             <div
               key={`${skill.name}-${index}`}
-              className="shrink-0 flex items-center gap-2 sm:gap-3 md:gap-4 px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 bg-[#f5f5f5] border border-gray-300 rounded-none hover:bg-[#c6ff00] hover:border-black transition-all duration-300 group"
+              className="shrink-0 flex items-center gap-2 sm:gap-3 md:gap-4 px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 bg-[#f5f5f5] border border-gray-300 rounded-none hover:bg-black hover:border-black transition-all duration-300 group"
             >
               {/* Logo */}
-              <div className="text-base sm:text-xl md:text-2xl w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 flex items-center justify-center bg-black text-[#c6ff00] rounded-full group-hover:bg-[#c6ff00] group-hover:text-black transition-all duration-300 font-bold">
+              <div className="text-base sm:text-xl md:text-2xl w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 flex items-center justify-center bg-black text-[#c6ff00] rounded-full group-hover:bg-white group-hover:text-black transition-all duration-300 font-bold">
                 {skill.icon}
               </div>
               {/* Name */}
-              <span className="text-sm sm:text-base md:text-lg lg:text-xl font-light text-black whitespace-nowrap">
+              <span className="text-sm sm:text-base md:text-lg lg:text-xl font-light text-black group-hover:text-white whitespace-nowrap transition-all duration-300">
                 {skill.name}
               </span>
             </div>

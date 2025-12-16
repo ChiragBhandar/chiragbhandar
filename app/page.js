@@ -5,6 +5,8 @@ import Navbar from '@/components/Navbar';
 import About from '@/components/About';
 import Skills from '@/components/Skills';
 import Projects from '@/components/Projects';
+import Contact from '@/components/Contact';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -131,6 +133,13 @@ export default function Home() {
       
       {/* Projects Section - Featured Work */}
       <Projects />
+      
+      {/* Contact Section - Reach Out Form */}
+      <Contact />
+      
+      {/* Footer */}
+      <Footer />
+      
     </div>
   );
 }

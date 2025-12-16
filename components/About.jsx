@@ -66,7 +66,7 @@ export default function About() {
   return (
     <>
       {/* About Me Section */}
-      <section ref={sectionRef} className="min-h-screen w-full bg-white text-white flex items-center justify-center relative overflow-hidden">
+      <section id="about" ref={sectionRef} className="min-h-screen w-full bg-white text-white flex items-center justify-center relative overflow-hidden">
         {/* Straight background shape */}
         <div className="absolute inset-0 overflow-hidden">
           <div 
@@ -104,26 +104,37 @@ export default function About() {
            <br />
           <br />
 
-          {/* About Me Button */}
+          {/* Download Resume Button */}
           <div 
-            className={`flex items-center gap-2 transition-all duration-1000 delay-600 ${
+            className={`transition-all duration-1000 delay-600 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
-            <button className="bg-[#c8e600] text-black px-8 py-3 rounded-full text-base font-medium hover:bg-[#b8d600] transition-all duration-300 flex items-center gap-2">
-              About Me
-            </button>
-            <button className="bg-[#c8e600] text-black w-12 h-12 rounded-full flex items-center justify-center hover:bg-[#b8d600] transition-all duration-300">
+            <a 
+              href="/ChiragBhandar-Resume.pdf" 
+              download="ChiragBhandar-Resume.pdf"
+              className="group relative inline-flex items-center gap-2 min-[1080px]:gap-3 px-5 py-2.5 min-[1080px]:px-8 min-[1080px]:py-4 bg-[#c8e600] text-black rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+            >
+              {/* Animated background */}
+              <span className="absolute inset-0 bg-gradient-to-r from-[#b8d600] via-[#aac600] to-[#9cb500] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
+              
+              {/* Button content */}
+              <span className="relative z-10 font-medium text-sm min-[1080px]:text-lg">Download Resume</span>
+              
+              {/* Download icon with animation */}
               <svg 
-                className="w-5 h-5" 
+                className="relative z-10 w-4 h-4 min-[1080px]:w-5 min-[1080px]:h-5 transition-all duration-300 group-hover:translate-y-1" 
                 fill="none" 
                 stroke="currentColor" 
                 viewBox="0 0 24 24"
-                strokeWidth="2.5"
+                strokeWidth={2}
               >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M4 12h16m0 0l-6-6m6 6l-6 6" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
-            </button>
+              
+              {/* Shine effect */}
+              <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent"></span>
+            </a>
           </div>
         </div>
 

@@ -37,10 +37,11 @@ export default function Navbar() {
   }, [isMenuOpen]);
 
   const menuItems = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Works', href: '/works' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Home', href: '#' },
+    { name: 'About', href: '#about' },
+    { name: 'Skills', href: '#skills' },
+    { name: 'Projects', href: '#projects' },
+    { name: 'Contact', href: '#contact' },
   ];
 
   return (
@@ -68,8 +69,8 @@ export default function Navbar() {
 
             {/* Navigation Links */}
             <div className="flex items-center gap-8">
-              <Link 
-                href="/" 
+              <a 
+                href="#" 
                 className="relative text-base font-medium text-black overflow-visible group"
               >
                 <span className="relative z-10 inline-block transition-all duration-300 group-hover:text-black/70">
@@ -84,9 +85,9 @@ export default function Navbar() {
                   ))}
                 </span>
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-black transition-all duration-300 ease-out group-hover:w-full"></span>
-              </Link>
-              <Link 
-                href="/about" 
+              </a>
+              <a 
+                href="#about" 
                 className="relative text-base font-medium text-black overflow-visible group"
               >
                 <span className="relative z-10 inline-block transition-all duration-300 group-hover:text-black/70">
@@ -101,13 +102,13 @@ export default function Navbar() {
                   ))}
                 </span>
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-black transition-all duration-300 ease-out group-hover:w-full"></span>
-              </Link>
-              <Link 
-                href="/works" 
+              </a>
+              <a 
+                href="#skills" 
                 className="relative text-base font-medium text-black overflow-visible group"
               >
                 <span className="relative z-10 inline-block transition-all duration-300 group-hover:text-black/70">
-                  {'Works'.split('').map((char, i) => (
+                  {'Skills'.split('').map((char, i) => (
                     <span 
                       key={i}
                       className="inline-block group-hover:animate-wave"
@@ -118,9 +119,26 @@ export default function Navbar() {
                   ))}
                 </span>
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-black transition-all duration-300 ease-out group-hover:w-full"></span>
-              </Link>
-              <Link 
-                href="/contact" 
+              </a>
+              <a 
+                href="#projects" 
+                className="relative text-base font-medium text-black overflow-visible group"
+              >
+                <span className="relative z-10 inline-block transition-all duration-300 group-hover:text-black/70">
+                  {'Projects'.split('').map((char, i) => (
+                    <span 
+                      key={i}
+                      className="inline-block group-hover:animate-wave"
+                      style={{ animationDelay: `${i * 0.05}s` }}
+                    >
+                      {char}
+                    </span>
+                  ))}
+                </span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-black transition-all duration-300 ease-out group-hover:w-full"></span>
+              </a>
+              <a 
+                href="#contact" 
                 className="relative text-base font-medium text-black overflow-visible group"
               >
                 <span className="relative z-10 inline-block transition-all duration-300 group-hover:text-black/70">
@@ -135,7 +153,7 @@ export default function Navbar() {
                   ))}
                 </span>
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-black transition-all duration-300 ease-out group-hover:w-full"></span>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -201,7 +219,7 @@ export default function Navbar() {
             {/* Menu Items */}
             <nav className="space-y-8 mb-16 max-[500px]:space-y-6">
               {menuItems.map((item, index) => (
-                <Link
+                <a
                   key={item.name}
                   href={item.href}
                   onClick={() => setIsMenuOpen(false)}
@@ -215,7 +233,7 @@ export default function Navbar() {
                   <span className="text-5xl font-bold text-black transition-all duration-300 group-hover:text-gray-600 group-hover:translate-x-4 inline-block max-[500px]:text-4xl">
                     {item.name}
                   </span>
-                </Link>
+                </a>
               ))}
             </nav>
 

@@ -50,7 +50,7 @@ const Projects = () => {
   };
 
   return (
-    <section className="w-full min-h-screen bg-white py-20 px-4 md:px-8 lg:px-16">
+    <section id="projects" className="w-full min-h-screen bg-white py-20 px-4 md:px-8 lg:px-16">
       <div className="max-w-350 mx-auto">
         {/* Section Header */}
         <motion.div 
