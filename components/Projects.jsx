@@ -21,27 +21,27 @@ const Projects = () => {
       title: 'Portfolio',
       description: 'A personal portfolio website showcasing projects and skills',
       image: '/project2.png',
-      demoUrl: 'https://your-demo-url.com',
+      demoUrl: 'https://chiragbhandar.vercel.app/',
       technologies: ['Next.js', 'JavaScript', 'TailwindCSS'],
       category: 'Website'
     },
     {
       id: 3,
-      title: 'AlienWare Product Showcase',
-      description: 'Modern simplistic design for showcasing products',
+      title: 'IronPulse Gym',
+      description: 'Gym landing page with modern and sleek design',
       image: '/project3.png',
-      demoUrl: 'https://3d-alienware-product-showcase-chirag.vercel.app/',
-      technologies: ['Next.js', 'three.js', 'Framer Motion'],
-      category: 'Web App'
+      demoUrl: 'https://ironpulsegym.vercel.app/',
+      technologies: ['Next.js', 'Framer Motion', 'Tailwind CSS'],
+      category: 'Website'
     },
     {
       id: 4,
-      title: 'Portfolio Showcase',
-      description: 'Creative portfolio with stunning animations',
-      image: '/project4.jpg',
-      demoUrl: 'https://your-demo-url.com',
-      technologies: ['Next.js', 'Framer Motion', 'Three.js'],
-      category: 'Website'
+      title: 'AlienWare Product Showcase',
+      description: 'Modern simplistic design for showcasing products',
+      image: '/project4.png',
+      demoUrl: 'https://3d-alienware-product-showcase-chirag.vercel.app/',
+      technologies: ['Next.js', 'three.js', 'Framer Motion'],
+      category: 'Web App'
     }
   ];
 
@@ -89,24 +89,24 @@ const Projects = () => {
                     src={project.image}
                     alt={project.title}
                     fill
-                    className="object-cover"
+                    className="object-cover object-center"
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
                 
                 {/* Overlay */}
                 <motion.div
-                  initial={false}
+                  initial={{ opacity: 0 }}
                   animate={{
                     opacity: hoveredProject === project.id ? 1 : 0
                   }}
                   transition={{ duration: 0.4 }}
-                  className="absolute inset-0 bg-black/70 backdrop-blur-sm"
+                  className="absolute inset-0 bg-black/70 backdrop-blur-sm pointer-events-none"
                 />
               </div>
 
               {/* Project Info - Always visible at bottom */}
-              <div className="absolute bottom-0 left-0 right-0 p-5 z-10 bg-linear-to-t from-black/80 via-black/60 to-transparent">
+              <div className="absolute bottom-0 left-0 right-0 p-5 z-10 bg-gradient-to-t from-black/80 via-black/60 to-transparent">
                 <p className="text-xs text-white/70 uppercase tracking-wider mb-1.5">
                   {project.category}
                 </p>
