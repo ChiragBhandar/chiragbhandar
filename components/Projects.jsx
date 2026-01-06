@@ -7,42 +7,44 @@ const Projects = () => {
   const [hoveredProject, setHoveredProject] = useState(null);
 
   const projects = [
+    
     {
       id: 1,
+      title: 'AI Resume Analyzer',
+      description: 'An AI-powered web app that instantly analyzes resumes for ATS compatibility and provides actionable, role-specific improvement suggestions.',
+      image: '/ResumeAnalyzer.jpeg',
+      demoUrl: 'https://airesumeanalyzer-five.vercel.app/',
+      technologies: ['Next.js', 'React', 'Framer Motion', 'TailwindCSS', 'API'],
+      category: 'Web App'
+    },
+    {
+      id: 2,
       title: 'Code&Canvas',
       description: 'A visually clean, modern digital agency landing page ',
-      image: '/project1.png',
+      image: '/Code&Canvas.jpeg',
       demoUrl: 'https://agency-landing-page-chirag.vercel.app/',
       technologies: ['React', 'Next.js', 'TailwindCSS'],
       category: 'Website'
     },
     {
-      id: 2,
+      id: 3,
       title: 'Portfolio',
       description: 'A personal portfolio website showcasing projects and skills',
-      image: '/project2.png',
+      image: '/Portfolio.jpeg',
       demoUrl: 'https://chiragbhandar.vercel.app/',
       technologies: ['Next.js', 'JavaScript', 'TailwindCSS'],
       category: 'Website'
     },
     {
-      id: 3,
+      id: 4,
       title: 'IronPulse Gym',
       description: 'Gym landing page with modern and sleek design',
-      image: '/project3.png',
+      image: '/IronPulse.jpeg',
       demoUrl: 'https://ironpulsegym.vercel.app/',
       technologies: ['Next.js', 'Framer Motion', 'Tailwind CSS'],
       category: 'Website'
     },
-    {
-      id: 4,
-      title: 'AlienWare Product Showcase',
-      description: 'Modern simplistic design for showcasing products',
-      image: '/project4.png',
-      demoUrl: 'https://3d-alienware-product-showcase-chirag.vercel.app/',
-      technologies: ['Next.js', 'three.js', 'Framer Motion'],
-      category: 'Web App'
-    }
+    
   ];
 
   const handleProjectClick = (demoUrl) => {
