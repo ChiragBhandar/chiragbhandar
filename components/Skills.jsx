@@ -151,8 +151,8 @@ export default function Skills() {
                 <div className="text-xs sm:text-sm font-light text-gray-400 mb-3 sm:mb-5 md:mb-6">{skill.id}</div>
 
                 {/* Icon */}
-                <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 mb-5 sm:mb-6 md:mb-8 text-[#c6ff00] group-hover:scale-110 transition-transform duration-300">
-                  <div className="w-full h-full bg-[#c6ff00] rounded-full flex items-center justify-center">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 mb-5 sm:mb-6 md:mb-8 text-[#e8e8e8] group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-full h-full bg-[#e8e8e8] rounded-full flex items-center justify-center">
                     <div className="w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 text-black">
                       {skill.icon}
                     </div>
@@ -249,7 +249,7 @@ function SkillsMarquee({ isVisible }) {
               className="shrink-0 flex items-center gap-2 sm:gap-3 md:gap-4 px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 bg-[#f5f5f5] border border-gray-300 rounded-none hover:bg-black hover:border-black transition-all duration-300 group"
             >
               {/* Logo */}
-              <div className="text-base sm:text-xl md:text-2xl w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 flex items-center justify-center bg-black text-[#c6ff00] rounded-full group-hover:bg-white group-hover:text-black transition-all duration-300 font-bold">
+              <div className="text-base sm:text-xl md:text-2xl w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 flex items-center justify-center bg-black text-[#e8e8e8] rounded-full group-hover:bg-white group-hover:text-black transition-all duration-300 font-bold">
                 {skill.icon}
               </div>
               {/* Name */}

@@ -113,10 +113,10 @@ export default function About() {
             <a 
               href="/ChiragBhandar-Resume.pdf" 
               download="ChiragBhandar-Resume.pdf"
-              className="group relative inline-flex items-center gap-2 min-[1080px]:gap-3 px-5 py-2.5 min-[1080px]:px-8 min-[1080px]:py-4 bg-[#c8e600] text-black rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+              className="group relative inline-flex items-center gap-2 min-[1080px]:gap-3 px-5 py-2.5 min-[1080px]:px-8 min-[1080px]:py-4 bg-[#f5f5f5] text-black rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl"
             >
               {/* Animated background */}
-              <span className="absolute inset-0 bg-gradient-to-r from-[#b8d600] via-[#aac600] to-[#9cb500] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
+              <span className="absolute inset-0 bg-gradient-to-r from-[#e8e8e8] via-[#d8d8d8] to-[#c8c8c8] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
               
               {/* Button content */}
               <span className="relative z-10 font-medium text-sm min-[1080px]:text-lg">Download Resume</span>
