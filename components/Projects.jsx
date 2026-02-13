@@ -11,7 +11,7 @@ const Projects = () => {
       id: 1,
       title: 'LifeStack',
       description: 'AI-powered full-stack productivity dashboard for habit tracking, journaling, analytics, and performance insights.',
-      image: '/Dashboard.png',
+      image: '/LifeStack.png',
       demoUrl: 'https://life-stack-dashboard.vercel.app/',
       technologies: [ 'Next.js 14','TypeScript','Prisma','PostgreSQL','NextAuth.js','Tailwind CSS','Grok API','Recharts'],
       category: 'Full Stack Web Application'
