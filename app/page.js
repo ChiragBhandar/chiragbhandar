@@ -80,7 +80,7 @@ export default function Home() {
               <h1 className={`text-4xl md:text-5xl min-[1080px]:text-8xl font-light leading-tight mb-4 text-black transition-all duration-1000 delay-200 ${
                 mounted ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
               }`}>
-                <span className="block">Front-end Developer</span>
+                <span className="block">Full-Stack Developer</span>
               </h1>
               
               {/* Subheading */}

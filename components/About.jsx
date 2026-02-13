@@ -61,7 +61,7 @@ export default function About() {
     };
   }, []);
 
-  const marqueeText = "FRONTEND DEVELOPER • REACT DEVELOPER • NEXT.JS DEVELOPER • TECH ENTHUSIAST • DSA LEARNER • ";
+  const marqueeText = "FULL-STACK DEVELOPER • FRONTEND SPECIALIST • REACT DEVELOPER • NEXT.JS DEVELOPER • TECH ENTHUSIAST • DSA LEARNER • ";
 
   return (
     <>
@@ -83,11 +83,11 @@ export default function About() {
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
-            I&apos;m <span className="font-light">Chirag</span> – a Front-end Developer focused on building modern, responsive, and
+            I&apos;m a <span className="font-light">Full-stack Developer</span> – dedicated to building scalable, secure,  
             <br />
-           user-centric web experiences.I specialize in 
+           and high-performance web applications from concept to deployment.
             <br />
-            crafting clean UIs with performance, accessibility, and smooth interactions in mind.
+            I design intuitive frontends, engineer efficient backend systems, and optimize databases for reliability and speed.
           </h1>
             <br />
             <br />
@@ -97,9 +97,7 @@ export default function About() {
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
-            Specialized in building modern Web Pages, high-performance frontend applications, 
-            <br />
-            and interactive web experiences using Next.js, React, Tailwind CSS, Framer Motion, and Gsap.
+            Experienced with modern technologies including Next.js, React, TypeScript, Node.js, Prisma, PostgreSQL, and cloud deployment platforms like Vercel.
           </p>
            <br />
           <br />
@@ -163,13 +161,13 @@ export default function About() {
 
       {/* Marquee Text Animation */}
       <div className="w-full bg-gray-100 overflow-hidden py-8 border-y border-gray-300">
-        <div className="flex animate-marquee">
+        <div className="flex animate-marquee-slow">
           <div className="flex whitespace-nowrap">
             <span className="text-3xl min-[380px]:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold uppercase tracking-tight inline-block text-black">
-              {marqueeText.repeat(10)}
+              {marqueeText.repeat(15)}
             </span>
             <span className="text-3xl min-[380px]:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold uppercase tracking-tight inline-block text-black">
-              {marqueeText.repeat(10)}
+              {marqueeText.repeat(15)}
             </span>
           </div>
         </div>

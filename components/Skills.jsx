@@ -37,8 +37,8 @@ export default function Skills() {
   const skills = [
     {
       id: '01',
-      title: 'Front-end Development',
-      description: 'Building scalable and high-performance web applications using Next.js, React, Tailwind CSS and JavaScript. Crafting responsive designs and seamless user experiences.',
+      title: 'Full-Stack Development',
+      description: 'Building end-to-end web applications with Next.js for server-side rendering and client-side interactions. Expertise in React, TypeScript, and modern JavaScript for creating robust full-stack solutions.',
       icon: (
         <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
           <path d="M12 2L2 7L12 12L22 7L12 2Z" />
@@ -49,8 +49,30 @@ export default function Skills() {
     },
     {
       id: '02',
-      title: 'UI/UX Design & Animations',
-      description: 'Designing modern, responsive interfaces with Figma, Tailwind CSS, GSAP and Framer Motion. Creating intuitive experiences with clean design systems and pixel-perfect implementations.',
+      title: 'Database & ORM',
+      description: 'Designing and implementing scalable database architectures with PostgreSQL. Proficient in Prisma ORM for type-safe database queries, migrations, and schema management with seamless Next.js integration.',
+      icon: (
+        <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+          <ellipse cx="12" cy="6" rx="8" ry="3" />
+          <path d="M4 6v12c0 1.66 3.58 3 8 3s8-1.34 8-3V6" />
+          <path d="M4 12c0 1.66 3.58 3 8 3s8-1.34 8-3" />
+        </svg>
+      )
+    },
+    {
+      id: '03',
+      title: 'API Development & Backend',
+      description: 'Creating RESTful APIs and serverless functions using Next.js API routes. Implementing authentication, authorization, data validation, and secure backend logic with best practices.',
+      icon: (
+        <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+          <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+        </svg>
+      )
+    },
+    {
+      id: '04',
+      title: 'UI/UX & Frontend Excellence',
+      description: 'Crafting modern, responsive interfaces with Tailwind CSS, GSAP, and Framer Motion. Building pixel-perfect designs with seamless animations and exceptional user experiences.',
       icon: (
         <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
           <rect x="3" y="3" width="7" height="7" />
@@ -62,30 +84,9 @@ export default function Skills() {
       )
     },
     {
-      id: '03',
-      title: 'Performance Optimization',
-      description: 'Optimizing web applications for lightning-fast load times, smooth animations, and excellent Core Web Vitals scores using modern techniques and best practices.',
-      icon: (
-        <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-          <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-        </svg>
-      )
-    },
-    {
-      id: '04',
-      title: 'Tools and Languages',
-      description: 'Proficient in JavaScript, TypeScript, HTML5, CSS3, Tailwind CSS, Figma, Git, GitHub, VS Code, and terminal commands for efficient development workflows.',
-      icon: (
-        <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-          <circle cx="12" cy="12" r="3" />
-          <path d="M12 1v6m0 6v6M5.6 5.6l4.2 4.2m4.2 4.2l4.2 4.2M1 12h6m6 0h6M5.6 18.4l4.2-4.2m4.2-4.2l4.2-4.2" />
-        </svg>
-      )
-    },
-    {
       id: '05',
-      title: 'Core Features Implementation',
-      description: 'Responsive Design , UI/UX , Cross-Browser Compatibility , SEO , Performance Optimization , Deploying and managing applications on cloud platforms like Vercel,',
+      title: 'DevOps & Deployment',
+      description: 'Deploying full-stack applications on Vercel with PostgreSQL databases. Managing CI/CD pipelines, environment variables, database migrations, and production-ready deployments.',
       icon: (
         <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
           <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
@@ -198,28 +199,27 @@ export default function Skills() {
 // Skills Marquee Component
 function SkillsMarquee({ isVisible }) {
   const skillsList = [
-    { name: 'React', icon: '⚛' },
     { name: 'Next.js', icon: '▲' },
-    { name: 'JavaScript', icon: 'JS' },
+    { name: 'React', icon: '⚛' },
     { name: 'TypeScript', icon: 'TS' },
+    { name: 'JavaScript', icon: 'JS' },
+    { name: 'Prisma', icon: '🔷' },
+    { name: 'PostgreSQL', icon: '�' },
+    { name: 'Node.js', icon: '⬢' },
     { name: 'Tailwind CSS', icon: '💨' },
-    { name: 'HTML5', icon: '<>' },
-    { name: 'CSS3', icon: '🎨' },
+    { name: 'API Development', icon: '🔌' },
+    { name: 'SQL', icon: '📊' },
     { name: 'Framer Motion', icon: '⚡' },
     { name: 'GSAP', icon: '🎯' },
-    { name: 'Figma', icon: '◆' },
-    { name: 'Git', icon: '�' },
+    { name: 'Git', icon: '🔀' },
     { name: 'GitHub', icon: '🐙' },
-    { name: 'VS Code', icon: '💻' },
-    { name: 'Node.js', icon: '⬢' },
     { name: 'Vercel', icon: '▲' },
-    { name: 'Responsive Design', icon: '�' },
+    { name: 'REST APIs', icon: '🌐' },
+    { name: 'Authentication', icon: '🔐' },
+    { name: 'Database Design', icon: '💾' },
     { name: 'SEO', icon: '🔍' },
-    { name: 'Performance', icon: '⚡' },
+    { name: 'Responsive Design', icon: '📱' },
   ];
-
-  // Duplicate the skills for seamless loop
-  const duplicatedSkills = [...skillsList, ...skillsList];
 
   return (
     <motion.div
@@ -241,23 +241,46 @@ function SkillsMarquee({ isVisible }) {
         <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-24 md:w-32 bg-linear-to-r from-white to-transparent z-10 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-24 md:w-32 bg-linear-to-l from-white to-transparent z-10 pointer-events-none" />
 
-        {/* Animated Marquee */}
-        <div className="flex gap-6 sm:gap-8 md:gap-12 py-4 sm:py-6 md:py-8 marquee-container">
-          {duplicatedSkills.map((skill, index) => (
-            <div
-              key={`${skill.name}-${index}`}
-              className="shrink-0 flex items-center gap-2 sm:gap-3 md:gap-4 px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 bg-[#f5f5f5] border border-gray-300 rounded-none hover:bg-black hover:border-black transition-all duration-300 group"
-            >
-              {/* Logo */}
-              <div className="text-base sm:text-xl md:text-2xl w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 flex items-center justify-center bg-black text-[#e8e8e8] rounded-full group-hover:bg-white group-hover:text-black transition-all duration-300 font-bold">
-                {skill.icon}
-              </div>
-              {/* Name */}
-              <span className="text-sm sm:text-base md:text-lg lg:text-xl font-light text-black group-hover:text-white whitespace-nowrap transition-all duration-300">
-                {skill.name}
-              </span>
+        {/* Animated Marquee - Two identical sets for seamless loop */}
+        <div className="overflow-hidden">
+          <div className="flex gap-6 sm:gap-8 md:gap-12 animate-marquee group/marquee hover:animation-pause">
+            {/* First set */}
+            <div className="flex gap-6 sm:gap-8 md:gap-12 py-4 sm:py-6 md:py-8 shrink-0">
+              {skillsList.map((skill, index) => (
+                <div
+                  key={`set1-${skill.name}-${index}`}
+                  className="shrink-0 flex items-center gap-2 sm:gap-3 md:gap-4 px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 bg-[#f5f5f5] border border-gray-300 rounded-none hover:bg-black hover:border-black transition-all duration-300 group"
+                >
+                  {/* Logo */}
+                  <div className="text-base sm:text-xl md:text-2xl w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 flex items-center justify-center bg-black text-[#e8e8e8] rounded-full group-hover:bg-white group-hover:text-black transition-all duration-300 font-bold">
+                    {skill.icon}
+                  </div>
+                  {/* Name */}
+                  <span className="text-sm sm:text-base md:text-lg lg:text-xl font-light text-black group-hover:text-white whitespace-nowrap transition-all duration-300">
+                    {skill.name}
+                  </span>
+                </div>
+              ))}
             </div>
-          ))}
+            {/* Second set - exact duplicate for seamless loop */}
+            <div className="flex gap-6 sm:gap-8 md:gap-12 py-4 sm:py-6 md:py-8 shrink-0">
+              {skillsList.map((skill, index) => (
+                <div
+                  key={`set2-${skill.name}-${index}`}
+                  className="shrink-0 flex items-center gap-2 sm:gap-3 md:gap-4 px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 bg-[#f5f5f5] border border-gray-300 rounded-none hover:bg-black hover:border-black transition-all duration-300 group"
+                >
+                  {/* Logo */}
+                  <div className="text-base sm:text-xl md:text-2xl w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 flex items-center justify-center bg-black text-[#e8e8e8] rounded-full group-hover:bg-white group-hover:text-black transition-all duration-300 font-bold">
+                    {skill.icon}
+                  </div>
+                  {/* Name */}
+                  <span className="text-sm sm:text-base md:text-lg lg:text-xl font-light text-black group-hover:text-white whitespace-nowrap transition-all duration-300">
+                    {skill.name}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </motion.div>
