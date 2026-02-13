@@ -7,27 +7,35 @@ const Projects = () => {
   const [hoveredProject, setHoveredProject] = useState(null);
 
   const projects = [
-    
     {
       id: 1,
+      title: 'LifeStack',
+      description: 'AI-powered full-stack productivity dashboard for habit tracking, journaling, analytics, and performance insights.',
+      image: '/Dashboard.png',
+      demoUrl: 'https://life-stack-dashboard.vercel.app/',
+      technologies: [ 'Next.js 14','TypeScript','Prisma','PostgreSQL','NextAuth.js','Tailwind CSS','Grok API','Recharts'],
+      category: 'Full Stack Web Application'
+    },
+    {
+      id: 2,
       title: 'AI Resume Analyzer',
       description: 'An AI-powered web app that instantly analyzes resumes for ATS compatibility and provides actionable, role-specific improvement suggestions.',
       image: '/ResumeAnalyzer.jpeg',
       demoUrl: 'https://airesumeanalyzer-five.vercel.app/',
-      technologies: ['Next.js', 'React', 'Framer Motion', 'TailwindCSS', 'API'],
+      technologies: ['Next.js', 'React', 'Framer Motion', 'TailwindCSS', 'Grok API'],
       category: 'Web App'
     },
     {
-      id: 2,
+      id: 3,
       title: 'Code&Canvas',
       description: 'A visually clean, modern digital agency landing page ',
       image: '/Code&Canvas.jpeg',
       demoUrl: 'https://agency-landing-page-chirag.vercel.app/',
-      technologies: ['React', 'Next.js', 'TailwindCSS'],
+      technologies: ['Next.js','React' ,'TailwindCSS' ,'Framer Motion'],
       category: 'Website'
     },
     {
-      id: 3,
+      id: 4,
       title: 'Portfolio',
       description: 'A personal portfolio website showcasing projects and skills',
       image: '/Portfolio.jpeg',
@@ -35,15 +43,7 @@ const Projects = () => {
       technologies: ['Next.js', 'JavaScript', 'TailwindCSS'],
       category: 'Website'
     },
-    {
-      id: 4,
-      title: 'IronPulse Gym',
-      description: 'Gym landing page with modern and sleek design',
-      image: '/IronPulse.jpeg',
-      demoUrl: 'https://ironpulsegym.vercel.app/',
-      technologies: ['Next.js', 'Framer Motion', 'Tailwind CSS'],
-      category: 'Website'
-    },
+    
     
   ];
 
