@@ -109,8 +109,8 @@ export default function About() {
             }`}
           >
             <a 
-              href="/ChiragBhandar_Resume.pdf" 
-              download="ChiragBhandar_Resume.pdf"
+              href="/ChiragBhandarResume.pdf" 
+              download="ChiragBhandarResume.pdf"
               className="group relative inline-flex items-center gap-2 min-[1080px]:gap-3 px-5 py-2.5 min-[1080px]:px-8 min-[1080px]:py-4 bg-[#f5f5f5] text-black rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl"
             >
               {/* Animated background */}
@@ -218,7 +218,7 @@ export default function About() {
                     YEARS OF EXPERIENCE
                   </p>
                   <p className="text-5xl min-[775px]:text-7xl md:text-8xl font-bold text-black">
-                    1+
+                    2+
                   </p>
                 </div>
               </div>
@@ -236,7 +236,7 @@ export default function About() {
                     PROJECTS COMPLETED
                   </p>
                   <p className="text-5xl min-[775px]:text-7xl md:text-8xl font-bold text-black">
-                    7+
+                    15+
                   </p>
                 </div>
               </div>

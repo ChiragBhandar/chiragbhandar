@@ -1,7 +1,6 @@
 import { Playfair_Display } from "next/font/google";
 import "./globals.css";
 import InitialLoader from "../components/InitialLoader";
-import Navbar from "../components/Navbar";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -20,9 +19,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body
         className={`${playfair.variable} antialiased overflow-x-hidden`}
+        suppressHydrationWarning
       >
         <InitialLoader>
           {children}

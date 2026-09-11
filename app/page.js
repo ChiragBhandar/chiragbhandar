@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import About from '@/components/About';
 import Skills from '@/components/Skills';
+import Experience from '@/components/Experience';
 import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
@@ -95,8 +96,8 @@ export default function Home() {
                 mounted ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
               }`}>
                 <a 
-                  href="/ChiragBhandar_Resume.pdf" 
-                  download="ChiragBhandar_Resume.pdf"
+                  href="/ChiragBhandarResume.pdf" 
+                  download="ChiragBhandarResume.pdf"
                   className="group relative inline-flex items-center gap-2 min-[1080px]:gap-3 px-5 py-2.5 min-[1080px]:px-8 min-[1080px]:py-4 bg-black text-white rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl"
                 >
                   {/* Animated background */}
@@ -130,6 +131,9 @@ export default function Home() {
       
       {/* Skills Section - Horizontal Carousel */}
       <Skills />
+      
+      {/* Experience Section - Work Experience & Internships */}
+      <Experience />
       
       {/* Projects Section - Featured Work */}
       <Projects />

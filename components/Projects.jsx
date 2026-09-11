@@ -9,15 +9,24 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
+      title: 'FieldFlow',
+      description: 'A multi-tenant field operations platform for dispatching, route planning, workforce management, GPS tracking, geofencing, and compliance auditing.',
+      image: '/FieldFlow.png',
+      demoUrl: 'https://field-flow-dev.vercel.app/',
+      technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Prisma', 'PostgreSQL', 'Better Auth', 'Leaflet'],
+      category: 'SaaS',
+    },
+    {
+      id: 2,
       title: 'LifeStack',
       description: 'AI-powered full-stack productivity dashboard for habit tracking, journaling, analytics, and performance insights.',
       image: '/LifeStack.png',
       demoUrl: 'https://life-stack-dashboard.vercel.app/',
-      technologies: [ 'Next.js 14','TypeScript','Prisma','PostgreSQL','NextAuth.js','Tailwind CSS','Grok API','Recharts'],
+      technologies: ['Next.js 14', 'TypeScript', 'Prisma', 'PostgreSQL', 'NextAuth.js', 'Tailwind CSS', 'Grok API', 'Recharts'],
       category: 'Full Stack Web Application'
     },
     {
-      id: 2,
+      id: 3,
       title: 'AI Resume Analyzer',
       description: 'An AI-powered web app that instantly analyzes resumes for ATS compatibility and provides actionable, role-specific improvement suggestions.',
       image: '/ResumeAnalyzer.jpeg',
@@ -26,25 +35,16 @@ const Projects = () => {
       category: 'Web App'
     },
     {
-      id: 3,
+      id: 4,
       title: 'Code&Canvas',
       description: 'A visually clean, modern digital agency landing page ',
       image: '/Code&Canvas.jpeg',
       demoUrl: 'https://agency-landing-page-chirag.vercel.app/',
-      technologies: ['Next.js','React' ,'TailwindCSS' ,'Framer Motion'],
+      technologies: ['Next.js', 'React', 'TailwindCSS', 'Framer Motion'],
       category: 'Website'
     },
-    {
-      id: 4,
-      title: 'Portfolio',
-      description: 'A personal portfolio website showcasing projects and skills',
-      image: '/Portfolio.jpeg',
-      demoUrl: 'https://chiragbhandar.vercel.app/',
-      technologies: ['Next.js', 'JavaScript', 'TailwindCSS'],
-      category: 'Website'
-    },
-    
-    
+
+
   ];
 
   const handleProjectClick = (demoUrl) => {
@@ -55,7 +55,7 @@ const Projects = () => {
     <section id="projects" className="w-full min-h-screen bg-white py-20 px-4 md:px-8 lg:px-16">
       <div className="max-w-350 mx-auto">
         {/* Section Header */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -95,7 +95,7 @@ const Projects = () => {
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
-                
+
                 {/* Overlay */}
                 <motion.div
                   initial={{ opacity: 0 }}
@@ -134,8 +134,8 @@ const Projects = () => {
                     animate={{
                       y: hoveredProject === project.id ? 0 : 100
                     }}
-                    transition={{ 
-                      duration: 0.6, 
+                    transition={{
+                      duration: 0.6,
                       ease: [0.43, 0.13, 0.23, 0.96],
                       delay: 0.1
                     }}
@@ -152,7 +152,7 @@ const Projects = () => {
                     opacity: hoveredProject === project.id ? 1 : 0,
                     y: hoveredProject === project.id ? 0 : 20
                   }}
-                  transition={{ 
+                  transition={{
                     duration: 0.5,
                     delay: 0.2
                   }}
@@ -168,7 +168,7 @@ const Projects = () => {
                     opacity: hoveredProject === project.id ? 1 : 0,
                     y: hoveredProject === project.id ? 0 : 20
                   }}
-                  transition={{ 
+                  transition={{
                     duration: 0.5,
                     delay: 0.3
                   }}
@@ -191,7 +191,7 @@ const Projects = () => {
                     opacity: hoveredProject === project.id ? 1 : 0,
                     y: hoveredProject === project.id ? 0 : 20
                   }}
-                  transition={{ 
+                  transition={{
                     duration: 0.5,
                     delay: 0.4
                   }}
@@ -199,17 +199,17 @@ const Projects = () => {
                 >
                   <button className="px-5 py-2 bg-white text-black rounded-full font-medium text-sm hover:bg-gray-100 transition-colors duration-300 flex items-center gap-2">
                     View Demo
-                    <svg 
-                      className="w-4 h-4" 
-                      fill="none" 
-                      stroke="currentColor" 
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
                       viewBox="0 0 24 24"
                     >
-                      <path 
-                        strokeLinecap="round" 
-                        strokeLinejoin="round" 
-                        strokeWidth={2} 
-                        d="M14 5l7 7m0 0l-7 7m7-7H3" 
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M14 5l7 7m0 0l-7 7m7-7H3"
                       />
                     </svg>
                   </button>
@@ -238,24 +238,24 @@ const Projects = () => {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <a 
+          <a
             href="https://github.com/ChiragBhandar"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-black hover:text-black/60 transition-colors duration-300 group"
           >
             <span className="text-lg font-light">View all projects on GitHub</span>
-            <svg 
-              className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" 
-              fill="none" 
-              stroke="currentColor" 
+            <svg
+              className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
+              fill="none"
+              stroke="currentColor"
               viewBox="0 0 24 24"
             >
-              <path 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                strokeWidth={1.5} 
-                d="M17 8l4 4m0 0l-4 4m4-4H3" 
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={1.5}
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
               />
             </svg>
           </a>

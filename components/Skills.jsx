@@ -1,7 +1,29 @@
 'use client';
 
 import { useEffect, useState, useRef } from 'react';
-import { motion, useAnimation } from 'framer-motion';
+import { motion } from 'framer-motion';
+import { 
+  SiNextdotjs, 
+  SiReact, 
+  SiTypescript, 
+  SiJavascript, 
+  SiPython, 
+  SiCplusplus, 
+  SiNodedotjs, 
+  SiTailwindcss, 
+  SiPostgresql, 
+  SiMongodb, 
+  SiPrisma, 
+  SiSupabase, 
+  SiGit, 
+  SiGithub, 
+  SiVercel, 
+  SiPostman, 
+  SiHtml5, 
+  SiCss3 
+} from 'react-icons/si';
+import { TbBrandVscode } from 'react-icons/tb';
+import { FaShieldHalved, FaDatabase } from 'react-icons/fa6';
 
 export default function Skills() {
   const [isVisible, setIsVisible] = useState(false);
@@ -37,8 +59,8 @@ export default function Skills() {
   const skills = [
     {
       id: '01',
-      title: 'Full-Stack Development',
-      description: 'Building end-to-end web applications with Next.js for server-side rendering and client-side interactions. Expertise in React, TypeScript, and modern JavaScript for creating robust full-stack solutions.',
+      title: 'Frontend & Full-Stack Development',
+      description: 'Building modern, performant web applications with React.js, Next.js, TypeScript, and Tailwind CSS. Proficient in HTML5, CSS3, JavaScript, and crafting responsive, accessible, and user-centric interfaces.',
       icon: (
         <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
           <path d="M12 2L2 7L12 12L22 7L12 2Z" />
@@ -49,8 +71,18 @@ export default function Skills() {
     },
     {
       id: '02',
-      title: 'Database & ORM',
-      description: 'Designing and implementing scalable database architectures with PostgreSQL. Proficient in Prisma ORM for type-safe database queries, migrations, and schema management with seamless Next.js integration.',
+      title: 'Backend & API Engineering',
+      description: 'Developing scalable backend systems, RESTful APIs, and Next.js Route Handlers powered by Node.js. Implementing clean architecture, robust server-side validation, error handling, and high-throughput endpoints.',
+      icon: (
+        <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+          <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+        </svg>
+      )
+    },
+    {
+      id: '03',
+      title: 'Database Architecture & ORM',
+      description: 'Designing normalized schemas and managing relational and NoSQL databases with PostgreSQL and MongoDB. Proficient in Prisma ORM for type-safe database queries, schema migrations, and optimized data modeling.',
       icon: (
         <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
           <ellipse cx="12" cy="6" rx="8" ry="3" />
@@ -60,33 +92,32 @@ export default function Skills() {
       )
     },
     {
-      id: '03',
-      title: 'API Development & Backend',
-      description: 'Creating RESTful APIs and serverless functions using Next.js API routes. Implementing authentication, authorization, data validation, and secure backend logic with best practices.',
-      icon: (
-        <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-          <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-        </svg>
-      )
-    },
-    {
       id: '04',
-      title: 'UI/UX & Frontend Excellence',
-      description: 'Crafting modern, responsive interfaces with Tailwind CSS, GSAP, and Framer Motion. Building pixel-perfect designs with seamless animations and exceptional user experiences.',
+      title: 'Authentication & Security',
+      description: 'Implementing secure user authentication and authorization using Better Auth and Supabase Auth. Enforcing Role-Based Access Control (RBAC), Row-Level Security (RLS), session security, and data protection.',
       icon: (
         <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-          <rect x="3" y="3" width="7" height="7" />
-          <rect x="14" y="3" width="7" height="7" />
-          <rect x="14" y="14" width="7" height="7" />
-          <rect x="3" y="14" width="7" height="7" />
-          <circle cx="6.5" cy="6.5" r="1.5" fill="currentColor" />
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          <path d="M9 12l2 2 4-4" />
         </svg>
       )
     },
     {
       id: '05',
-      title: 'DevOps & Deployment',
-      description: 'Deploying full-stack applications on Vercel with PostgreSQL databases. Managing CI/CD pipelines, environment variables, database migrations, and production-ready deployments.',
+      title: 'Programming Languages & Core CS',
+      description: 'Solid foundations in C++, JavaScript, TypeScript, Python, and SQL. Deep problem-solving capabilities grounded in Data Structures & Algorithms (DSA), Object-Oriented Programming (OOPs), DBMS, OS, and CN.',
+      icon: (
+        <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+          <polyline points="16 18 22 12 16 6" />
+          <polyline points="8 6 2 12 8 18" />
+          <line x1="14" y1="4" x2="10" y2="20" />
+        </svg>
+      )
+    },
+    {
+      id: '06',
+      title: 'Tools, DevOps & Cloud Platforms',
+      description: 'Streamlining development and continuous deployment on Vercel. Proficient with Git and GitHub for version control and collaboration, Postman for API testing and debugging, and VS Code for efficient engineering.',
       icon: (
         <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
           <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
@@ -198,27 +229,32 @@ export default function Skills() {
 
 // Skills Marquee Component
 function SkillsMarquee({ isVisible }) {
+  const iconClass = "w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6";
   const skillsList = [
-    { name: 'Next.js', icon: '▲' },
-    { name: 'React', icon: '⚛' },
-    { name: 'TypeScript', icon: 'TS' },
-    { name: 'JavaScript', icon: 'JS' },
-    { name: 'Prisma', icon: '🔷' },
-    { name: 'PostgreSQL', icon: '�' },
-    { name: 'Node.js', icon: '⬢' },
-    { name: 'Tailwind CSS', icon: '💨' },
-    { name: 'API Development', icon: '🔌' },
-    { name: 'SQL', icon: '📊' },
-    { name: 'Framer Motion', icon: '⚡' },
-    { name: 'GSAP', icon: '🎯' },
-    { name: 'Git', icon: '🔀' },
-    { name: 'GitHub', icon: '🐙' },
-    { name: 'Vercel', icon: '▲' },
-    { name: 'REST APIs', icon: '🌐' },
-    { name: 'Authentication', icon: '🔐' },
-    { name: 'Database Design', icon: '💾' },
-    { name: 'SEO', icon: '🔍' },
-    { name: 'Responsive Design', icon: '📱' },
+    { name: 'Next.js', icon: <SiNextdotjs className={iconClass} /> },
+    { name: 'React.js', icon: <SiReact className={iconClass} /> },
+    { name: 'TypeScript', icon: <SiTypescript className={iconClass} /> },
+    { name: 'JavaScript', icon: <SiJavascript className={iconClass} /> },
+    { name: 'Node.js', icon: <SiNodedotjs className={iconClass} /> },
+    { name: 'Tailwind CSS', icon: <SiTailwindcss className={iconClass} /> },
+    { name: 'Prisma ORM', icon: <SiPrisma className={iconClass} /> },
+    { name: 'PostgreSQL', icon: <SiPostgresql className={iconClass} /> },
+    { name: 'MongoDB', icon: <SiMongodb className={iconClass} /> },
+    { name: 'Python', icon: <SiPython className={iconClass} /> },
+    { name: 'C++', icon: <SiCplusplus className={iconClass} /> },
+    { name: 'SQL', icon: <FaDatabase className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5" /> },
+    { name: 'REST APIs', icon: <span className="text-[10px] sm:text-xs md:text-sm font-bold tracking-tight">API</span> },
+    { name: 'Route Handlers', icon: <SiNextdotjs className={iconClass} /> },
+    { name: 'Better Auth', icon: <FaShieldHalved className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5" /> },
+    { name: 'Supabase Auth', icon: <SiSupabase className={iconClass} /> },
+    { name: 'RBAC Security', icon: <FaShieldHalved className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5" /> },
+    { name: 'HTML5', icon: <SiHtml5 className={iconClass} /> },
+    { name: 'CSS3', icon: <SiCss3 className={iconClass} /> },
+    { name: 'Git', icon: <SiGit className={iconClass} /> },
+    { name: 'GitHub', icon: <SiGithub className={iconClass} /> },
+    { name: 'Vercel', icon: <SiVercel className={iconClass} /> },
+    { name: 'Postman', icon: <SiPostman className={iconClass} /> },
+    { name: 'VS Code', icon: <TbBrandVscode className={iconClass} /> },
   ];
 
   return (

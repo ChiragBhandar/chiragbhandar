@@ -40,6 +40,7 @@ export default function Navbar() {
     { name: 'Home', href: '#' },
     { name: 'About', href: '#about' },
     { name: 'Skills', href: '#skills' },
+    { name: 'Experience', href: '#experience' },
     { name: 'Projects', href: '#projects' },
     { name: 'Contact', href: '#contact' },
   ];
@@ -109,6 +110,23 @@ export default function Navbar() {
               >
                 <span className="relative z-10 inline-block transition-all duration-300 group-hover:text-black/70">
                   {'Skills'.split('').map((char, i) => (
+                    <span 
+                      key={i}
+                      className="inline-block group-hover:animate-wave"
+                      style={{ animationDelay: `${i * 0.05}s` }}
+                    >
+                      {char}
+                    </span>
+                  ))}
+                </span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-black transition-all duration-300 ease-out group-hover:w-full"></span>
+              </a>
+              <a 
+                href="#experience" 
+                className="relative text-base font-medium text-black overflow-visible group"
+              >
+                <span className="relative z-10 inline-block transition-all duration-300 group-hover:text-black/70">
+                  {'Experience'.split('').map((char, i) => (
                     <span 
                       key={i}
                       className="inline-block group-hover:animate-wave"
